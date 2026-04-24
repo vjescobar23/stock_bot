@@ -36,7 +36,13 @@ def main():
         atr_latest = atr.iloc[-1]
         adx_latest = adx.iloc[-1]
         obv_latest = obv.iloc[-1]
-        combined = signal_majority(sma_latest["signal"], macd_latest["signal"], rsi_latest["signal"], bb_latest["signal"], obv_latest["signal"])
+        combined = signal_majority(                                                                 
+            sma_latest["signal"],                                                                   
+            macd_latest["signal"],                                                                  
+            rsi_latest["signal"],                                                                   
+            bb_latest["signal"],                                                                    
+            obv_latest["signal"],                                       
+        )
         parts = [                                                                                   
             f"{ticker}",
             f"Close: {sma_latest['Close']:.2f}",                                                    
